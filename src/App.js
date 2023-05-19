@@ -1,21 +1,19 @@
-import { useState } from "react";
-import BookCreate from "./components/BookCreate";
-
+import { useState } from 'react';
+import BookCreate from './components/BookCreate';
 
 function App() {
-const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
 
-const createBook = (title) => {
+  const createBook = (title) => {
+    const updatedBook = [...books, { id: 1, title: title }];
 
- const updatedBook = [...books, {id: 1, title: title}];
-
- setBooks(updatedBook)
- console.log(updatedBook)
-}
+    setBooks(updatedBook);
+    console.log(updatedBook);
+  };
   return (
-    <div className="App">
-      <div> Length is: {books.length}</div>
-     <BookCreate  onCreate={createBook}/>
+    <div className='App'>
+      <div> Length {books.length}</div>
+      <BookCreate onCreate={createBook} />
     </div>
   );
 }
