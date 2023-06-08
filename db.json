@@ -1,16 +1,8 @@
 {
   "books": [
     {
-      "title": "matty de suc",
-      "id": 1
-    },
-    {
-      "title": "Cike and the river",
+      "title": "canoed ",
       "id": 2
-    },
-    {
-      "title": "Bonyye and Clide",
-      "id": 3
     }
   ]
 }
