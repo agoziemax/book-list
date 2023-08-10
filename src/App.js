@@ -8,14 +8,14 @@ function App() {
 const [books, setBooks] = useState([])
 
 const createBook = (title) => {
-console.log('title');
+console.log(title);
 };
 
   return (
     <div className='App'>
       <h4 className='is-size-3 has-text-weight-bold ml-6'>Reading List</h4>
       <BookList />
-      <BookCreate c />
+      <BookCreate onCreate={createBook}/>
     </div>
   );
 }
