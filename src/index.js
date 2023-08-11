@@ -1,13 +1,7 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css'
-import {Provider} from './context/books';
-
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider>
-    <App />
-  </Provider>
-);
+root.render(<App />);

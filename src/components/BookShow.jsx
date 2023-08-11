@@ -1,15 +1,11 @@
 import React from 'react';
 
+function BookShow({ book }) {
+  console.log(book);
 
-
-function BookShow() {
-
-
-  return (
-    <div className='book-show'>
-     
-    </div>
-  );
+  return <div className='book-show'>
+    {book.title}
+  </div>;
 }
 
 export default BookShow;

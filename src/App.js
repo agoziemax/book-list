@@ -16,13 +16,6 @@ function App() {
     setBooks(updatedBooks);
   };
 
-  const newBook = books.map((book) => {
-    const tit = book.title;
-    return <div>{tit}</div>;
-  });
-
-  console.log(newBook);
-
   return (
     <div className='app'>
       <h4 className='is-size-3 has-text-weight-bold ml-6'>Reading List</h4>
