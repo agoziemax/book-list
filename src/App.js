@@ -6,8 +6,8 @@ import './index.css';
 
 function App() {
   const [books, setBooks] = useState([]);
- 
 
+// Function for creating a new Book object
   const createBook = (title) => {
     // Syntax for updating an array with new items.
     // If a state is an array or object, be careful how you update it.
