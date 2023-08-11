@@ -1,21 +1,33 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
-import BooksContext from './context/books';
+// import BooksContext from './context/books';
 import './index.css';
 
 function App() {
-const [books, setBooks] = useState([])
+  const [books, setBooks] = useState([]);
+ 
 
-const createBook = (title) => {
-console.log(title);
-};
+  const createBook = (title) => {
+    // Syntax for updating an array with new items.
+    // If a state is an array or object, be careful how you update it.
+    const updatedBooks = [...books, { id: Math.round(Math.random() * 999), title }];
+
+    setBooks(updatedBooks);
+  };
+
+  const newBook = books.map((book) => {
+    const tit = book.title;
+    return <div>{tit}</div>;
+  });
+
+  console.log(newBook);
 
   return (
-    <div className='App'>
+    <div className='app'>
       <h4 className='is-size-3 has-text-weight-bold ml-6'>Reading List</h4>
-      <BookList />
-      <BookCreate onCreate={createBook}/>
+      <BookList books={books} />
+      <BookCreate onCreate={createBook} />
     </div>
   );
 }

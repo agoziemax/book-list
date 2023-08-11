@@ -7,7 +7,7 @@ function BookShow() {
 
   return (
     <div className='book-show'>
-
+     
     </div>
   );
 }
