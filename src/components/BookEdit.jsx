@@ -13,7 +13,6 @@ function BookEdit({book, onEdit, handleEditClick}) {
     e.preventDefault()
     onEdit(book.id, title)
     handleEditClick()
-
   }
 
   return (
