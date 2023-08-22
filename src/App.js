@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
+import axios from 'axios';
 // import BooksContext from './context/books';
 import './index.css';
+
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -32,7 +34,7 @@ function App() {
   };
   // End
 
-  // Function for creating a new Book object
+  // Function for creating a new Book object in the code
   const createBook = (title) => {
     // Syntax for updating an array with new items.
     // If a state is an array or object, be careful how you update it.
@@ -41,6 +43,9 @@ function App() {
 
     // Update the book state after the book has been deleted
     setBooks(updatedBooks);
+
+    // API calls
+    axios.post('http://3001/books', { title });
   };
 
   return (

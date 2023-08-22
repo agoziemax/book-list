@@ -1,7 +1,11 @@
 {
   "books": [
     {
-      "title": "canoed ",
+      "title": "Harry Potter",
+      "id": 1
+    },
+    {
+      "title": "Harry Potter",
       "id": 2
     }
   ]
